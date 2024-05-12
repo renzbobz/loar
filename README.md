@@ -29,7 +29,7 @@ loar.start();
 
 | name     | type   | default | description                          |
 | -------- | ------ | ------- | ------------------------------------ |
-| color    | string | white   | Loading bar color (using picocolors) |
+| color    | string | cyan    | Loading bar color (using picocolors) |
 | symbol   | string | ▬       | Loading bar symbol                   |
 | text     | string |         | Add text above loading bar           |
 | width    | number | 20      | Loading bar width                    |
