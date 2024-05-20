@@ -20,7 +20,7 @@ export class Loar {
   constructor(opts: Options = {}) {
     this.text = opts.text;
     this.symbol = opts.symbol ?? "▬";
-    this.color = opts.color ?? "cyan";
+    this.color = opts.color ?? "white";
     this.width = opts.width ?? 20;
     this.interval = opts.interval ?? 10;
   }
@@ -28,10 +28,13 @@ export class Loar {
   start() {
     const space = " ";
     const terminalWidth = process.stdout.columns;
-    const { text, width, symbol, color, interval } = this;
+    const { symbol, interval } = this;
 
     let index = 0;
     const fn = () => {
+      let text = this.text;
+      let color = this.color;
+      let width = this.width;
       let left = "";
       let leftSize = index - width;
 
@@ -63,6 +66,7 @@ export class Loar {
   }
 
   stop() {
+    this.text = undefined;
     clearInterval(this.#id);
     logUpdate.clear();
   }

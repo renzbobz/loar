@@ -29,7 +29,7 @@ loar.start();
 
 | name     | type   | default | description                          |
 | -------- | ------ | ------- | ------------------------------------ |
-| color    | string | cyan    | Loading bar color (using picocolors) |
+| color    | string | white   | Loading bar color (using picocolors) |
 | symbol   | string | ▬       | Loading bar symbol                   |
 | text     | string |         | Add text above loading bar           |
 | width    | number | 20      | Loading bar width                    |
@@ -39,7 +39,7 @@ loar.start();
 
 ```js
 loar.start();
-setTimeout(loar.stop.bind(loar), 6000);
+setTimeout(() => loar.stop(), 6000);
 ```
 
 ![preview](https://github.com/renzbobz/loar/blob/main/preview.gif?raw=true)
